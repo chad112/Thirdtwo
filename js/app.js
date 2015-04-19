@@ -11,14 +11,14 @@
             })
 
             // route for the about page
-            .when('/about', {
-                templateUrl : 'pages/about.html',
+            .when('/blog', {
+                templateUrl : 'includes/blog.html',
                 controller  : 'mainCtrl'
             })
 
             // route for the contact page
             .when('/contact', {
-                templateUrl : 'pages/contact.html',
+                templateUrl : 'includes/contact.html',
                 controller  : 'mainCtrl'
             });
     });
