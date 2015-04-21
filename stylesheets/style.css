@@ -14,7 +14,18 @@ p {
   font-size: 15px; }
 
 h2 {
-  padding: 15px 0; }
+  padding: 15px 0;
+  transition: .25s ease; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  color: #5b3838; }
+
+span {
+  padding: 0 5px; }
 
 .text-center {
   text-align: center; }
@@ -224,12 +235,106 @@ input:focus {
   outline: none;
   border: 1px solid #5b3838; }
 
-div .contact-form input .submit-button {
+.submit-button {
   height: 20px;
-  width: 80px; }
+  width: 180px;
+  position: relative;
+  display: block; }
 
-#map-canvas {
-  width: 100%;
-  height: 500px; }
+.map {
+  padding: 80px 0px 0px 0px; }
+
+.about-container {
+  width: 70%;
+  margin: 0 auto;
+  display: block; }
+
+.about-container iframe {
+  margin: 0 auto;
+  display: block;
+  padding: 20px; }
+
+.about-container h2 {
+  font-size: 30px;
+  font-weight: 600; }
+
+.team {
+  margin: 0 auto;
+  display: block;
+  float: center;
+  text-align: center; }
+
+.team img {
+  display: inline;
+  padding: 20px;
+  height: 300px;
+  width: 300px; }
+
+/* ANIMATIONS
+============================================================================= */
+.toggle {
+  -webkit-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */ }
+
+.page-all .toggle .ng-enter {
+  -webkit-transition: none; }
+
+.page-all .toggle .ng-leave {
+  -webkit-transition: none; }
+
+.page-web .toggle .ng-enter {
+  -webkit-transition: none; }
+
+.page-web .toggle .ng-leave {
+  -webkit-transition: none; }
+
+.page-print .toggle .ng-enter {
+  -webkit-transition: none; }
+
+.page-print .toggle .ng-leave {
+  -webkit-transition: none; }
+
+.toggle.ng-enter {
+  opacity: 0;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms; }
+
+.toggle.ng-enter-active {
+  opacity: 1; }
+
+.toggle.ng-leave {
+  opacity: 1;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms; }
+
+.toggle.ng-leave-active {
+  opacity: 0; }
+
+.toggle.ng-hide-add {
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1; }
+
+.toggle.ng-hide-add.ng-hide-add-active {
+  opacity: 0; }
+
+.toggle.ng-hide-remove {
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  display: block !important;
+  opacity: 0; }
+
+.toggle.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

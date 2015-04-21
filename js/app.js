@@ -1,4 +1,4 @@
-    var myApp = angular.module('myApp', ['ngRoute']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
     // configure our routes
     myApp.config(function($routeProvider) {
@@ -10,9 +10,15 @@
                 controller  : 'mainCtrl'
             })
 
-            // route for the about page
+            // route for the blog page
             .when('/blog', {
                 templateUrl : 'includes/blog.html',
+                controller  : 'mainCtrl'
+            })
+						
+						// route for the about page
+            .when('/about', {
+                templateUrl : 'includes/about.html',
                 controller  : 'mainCtrl'
             })
 
