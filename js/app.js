@@ -15,6 +15,12 @@
                 templateUrl : 'includes/blog.html',
                 controller  : 'mainCtrl'
             })
+        
+            // route for the store page
+            .when('/store', {
+                templateUrl : 'includes/store.html',
+                controller  : 'mainCtrl'
+            })
 						
 						// route for the about page
             .when('/about', {

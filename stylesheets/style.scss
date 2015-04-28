@@ -1,3 +1,5 @@
+@import "bourbon/bourbon";
+
 $break-small: 480px;
 $break-medium: 768px;
 $break-large: 1000px;
@@ -5,9 +7,12 @@ $break-large: 1000px;
 $purple: #5b3838;
 
 body {
-    background-color: rgba(230, 220, 184, 0.69);
-    font-family: sans-serif;
-		z-index: 0;
+    background-color: #5b3838;
+    font-family: 'voyagerlight';
+    word-spacing: 0px;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
 	
 }
 h1 {
@@ -40,7 +45,7 @@ span {
 }
 .texture {
   background: url("/img/paper-texture.png");
-  opacity: 1;
+  opacity: 0;
     background-color: #b7b7b7;
   position: fixed;
   z-index: -10;
@@ -49,12 +54,15 @@ span {
 }
 .container {
     background-color: rgba(255, 255, 255, 0.72);
-    z-index: 999;
+    z-index: -20;
     width: 80%;
     height: auto;
     margin: 0 auto;
-    padding: 15px;
+    padding: 15px 0;
     @media screen and (max-width: $break-medium) {
+    width: 100%;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width:667px){
     width: 100%;
     }
 }
@@ -64,7 +72,9 @@ span {
 nav {
     height: 115px;
     width: 100%;
-    background-color: #434343;
+    z-index: 999;
+    box-shadow: 5px 3px 2px rgba(41, 41, 41, 0.22);
+   @include linear-gradient(#585858, #333333);
 		border-bottom: 2px solid #343434;
 }
 .large-nav {
@@ -97,14 +107,17 @@ nav ul li {
     display: inline-block;
 }
 nav ul li a {
-    padding: 10px;
+    padding: 45px 10px;
+    border-radius: 5px;
     color: #fff;
     font-size: 20px;
+    font-family: voyagerbold;
     text-decoration: none;
 		transition: .25s ease;
 }
 nav ul li a:hover {
-    color: dimgrey;
+    color: $purple;
+    background-color: white;
     text-decoration: none;
 }
 
@@ -125,6 +138,7 @@ footer {
 .footer-copy img {
     width: 50px;
     padding: 5px;
+    transition: .25s ease;
 }
 .footer-copy img:hover {
     opacity: .8;
@@ -184,6 +198,7 @@ footer a:hover {
 	font-size: 40px;
 	font-weight: 600;
 	font-style: italic;
+    text-align: center;
 }
 .news-post img {
 	width: 80%;
@@ -287,12 +302,14 @@ footer a:hover {
     border-radius: 5px;
     -webkit-appearance: none;
     border: none;
+    font-family: 'voyagerregular';
 }
 .contact-form textarea {
     width: 100%;
     margin: 10px;
     border-radius: 5px;
     border: none;
+    font-family: 'voyagerregular';
 }
 textarea:focus {
     outline: none;
@@ -345,8 +362,9 @@ input:focus {
 	width: 300px;
 	transition: .25s left;
 	@media screen and (max-width: $break-large){
-		float: none;
+        float: none;
 		margin: 0 auto;
+        padding: 0;
 	}
 }
 .team p {
@@ -369,6 +387,44 @@ input:focus {
 	line-height: 20px;
 	margin: 0;
 	font-style: italic;
+}
+
+///////////////////////STORE////////////////////////////
+
+.store-container {
+    width: 90%;
+    height: 890px;
+	margin: 0 auto;
+	display: block;
+    padding-bottom: 20px;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+}
+.store-item {
+    margin:  0;
+    width: 30%;
+    padding: 1.65%;
+    float: left;
+    display: block;
+    transition: .25s ease;
+    border-radius: 5px;
+}
+.store-item:hover {
+    background-color: $purple;
+    color: #fff;
+}
+.store-item img {
+    width: 100%;
+}
+.store-item h2 {
+    font-size: 25px;
+    text-align: center;
+    line-height: 10px;
+}
+.store-item p {
+    text-align: center;
+    font-style: italic;
 }
 
 /* ANIMATIONS
