@@ -48,7 +48,7 @@ span {
   width: 80%;
   height: auto;
   margin: 0 auto;
-  padding: 15px 0; }
+  padding: 15px 0 0 0; }
   @media screen and (max-width: 768px) {
     .container {
       width: 100%; } }
@@ -356,13 +356,14 @@ input:focus {
 
 .store-container {
   width: 90%;
-  height: 890px;
+  height: 100%;
   margin: 0 auto;
   display: block;
   padding-bottom: 20px;
   padding-top: 0;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
 
 .store-item {
   margin: 0;
@@ -372,6 +373,10 @@ input:focus {
   display: block;
   transition: .25s ease;
   border-radius: 5px; }
+  @media screen and (max-width: 768px) {
+    .store-item {
+      width: 45%;
+      padding: 2.5%; } }
 
 .store-item:hover {
   background-color: #5b3838;
@@ -384,6 +389,9 @@ input:focus {
   font-size: 25px;
   text-align: center;
   line-height: 10px; }
+  @media screen and (max-width: 768px) {
+    .store-item h2 {
+      font-size: 18px; } }
 
 .store-item p {
   text-align: center;
