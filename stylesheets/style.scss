@@ -1,8 +1,10 @@
 @import "bourbon/bourbon";
+@import "breakpoint-sass/stylesheets/breakpoint";
 
-$break-small: 480px;
-$break-medium: 768px;
-$break-large: 1000px;
+$break-small: max-wdith 480px;
+$break-medium: max-width 768px;
+$break-large: max-width 1000px;
+$break-mobile: (-webkit-min-device-pixel-ratio: 2) (max-device-width: 667px);
 
 $purple: #5b3838;
 
@@ -44,13 +46,9 @@ span {
     text-align: center;
 }
 .texture {
-  background: url("/img/paper-texture.png");
-  opacity: 0;
-    background-color: #b7b7b7;
-  position: fixed;
-  z-index: -10;
-  width: 100%;
-  height: 100%;
+  background: url("/img/texture.png");
+	background-blend-mode: multiply;
+	
 }
 .container {
     background-color: rgba(255, 255, 255, 0.72);
@@ -59,12 +57,12 @@ span {
     height: auto;
     margin: 0 auto;
     padding: 15px 0 0 0;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint($break-medium) {
     width: 100%;
     }
-    @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width:667px){
-    width: 100%;
-    }
+	@include breakpoint($break-mobile) {
+	width: 100%;
+	}
 }
 
 ///////////////////////NAVIGATION////////////////////////////
@@ -79,13 +77,13 @@ nav {
 }
 .large-nav {
     display: block;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint($break-medium) {
     display: none;
     }
 }
 .small-nav {
     display: none;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint($break-medium) {
     display: block;
     }
 }
@@ -208,7 +206,7 @@ footer a:hover {
 	margin: 0 auto;
 			max-height: 600px;
 	display: block;
-	@media screen and (max-width: $break-medium){
+	@include breakpoint($break-medium){
 		width: 100%;
 	}
 }
@@ -229,7 +227,7 @@ footer a:hover {
     width: 60%;
     margin: 0 auto;
     display: block;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint($break-medium) {
     width: 90%;
     }
 }
@@ -271,7 +269,7 @@ footer a:hover {
     max-height: 500px;
     padding: 20px;
     max-width: 90%;
-        @media screen and (max-width: $break-small) {
+    @include breakpoint($break-small) {
     width: 100%;
     max-height: 100%;
     }
@@ -291,7 +289,7 @@ footer a:hover {
     margin: 0 auto;
     display: block;
     padding-top: 30px;
-    @media screen and (max-width: $break-medium) {
+    @include breakpoint($break-medium) {
         width: 80%;
     }
 }
@@ -349,7 +347,7 @@ input:focus {
 	text-align: center;
 	width: 100%;
 	height: 350px;
-	@media screen and (max-width: $break-large){
+	@include breakpoint($break-large){
 		height: auto;
 	}
 }
@@ -361,7 +359,7 @@ input:focus {
 	height: 300px;
 	width: 300px;
 	transition: .25s left;
-	@media screen and (max-width: $break-large){
+	@include breakpoint($break-large){
         float: none;
 		margin: 0 auto;
         padding: 0;
@@ -377,7 +375,7 @@ input:focus {
 	line-height: 20px;
 	margin: 0;
 	padding: 20px 0 0 0;
-	@media screen and (max-width: $break-large){
+	@include breakpoint($break-large){
 		text-align: center;
 	}
 }
@@ -410,7 +408,7 @@ input:focus {
     display: block;
     transition: .25s ease;
     border-radius: 5px;
-	@media screen and (max-width: $break-medium){
+	@include breakpoint($break-medium){
 		width: 45%;
 		padding: 2.5%;
 	}
@@ -426,7 +424,7 @@ input:focus {
     font-size: 25px;
     text-align: center;
     line-height: 10px;
-	@media screen and (max-width: $break-medium){
+	@include breakpoint($break-medium){
 		font-size: 18px;
 	}
 }

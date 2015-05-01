@@ -34,13 +34,8 @@ span {
   text-align: center; }
 
 .texture {
-  background: url("/img/paper-texture.png");
-  opacity: 0;
-  background-color: #b7b7b7;
-  position: fixed;
-  z-index: -10;
-  width: 100%;
-  height: 100%; }
+  background: url("/img/texture.png");
+  background-blend-mode: multiply; }
 
 .container {
   background-color: rgba(255, 255, 255, 0.72);
@@ -49,10 +44,10 @@ span {
   height: auto;
   margin: 0 auto;
   padding: 15px 0 0 0; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .container {
       width: 100%; } }
-  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+  @media (min-width: -webkit-min-device-pixel-ratio 2) and (min-width: max-device-width 667px) {
     .container {
       width: 100%; } }
 
@@ -68,13 +63,13 @@ nav {
 
 .large-nav {
   display: block; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .large-nav {
       display: none; } }
 
 .small-nav {
   display: none; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .small-nav {
       display: block; } }
 
@@ -187,7 +182,7 @@ footer a:hover {
   margin: 0 auto;
   max-height: 600px;
   display: block; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .news-post img {
       width: 100%; } }
 
@@ -205,7 +200,7 @@ footer a:hover {
   width: 60%;
   margin: 0 auto;
   display: block; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .blog-entries {
       width: 90%; } }
 
@@ -246,7 +241,7 @@ footer a:hover {
   max-height: 500px;
   padding: 20px;
   max-width: 90%; }
-  @media screen and (max-width: 480px) {
+  @media (max-wdith: 480px) {
     .blog-entries img {
       width: 100%;
       max-height: 100%; } }
@@ -263,7 +258,7 @@ footer a:hover {
   margin: 0 auto;
   display: block;
   padding-top: 30px; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .contact-form {
       width: 80%; } }
 
@@ -315,7 +310,7 @@ input:focus {
   text-align: center;
   width: 100%;
   height: 350px; }
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 1000px) {
     .team {
       height: auto; } }
 
@@ -327,7 +322,7 @@ input:focus {
   height: 300px;
   width: 300px;
   transition: .25s left; }
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 1000px) {
     .team img {
       float: none;
       margin: 0 auto;
@@ -343,7 +338,7 @@ input:focus {
   line-height: 20px;
   margin: 0;
   padding: 20px 0 0 0; }
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 1000px) {
     .team h2 {
       text-align: center; } }
 
@@ -373,7 +368,7 @@ input:focus {
   display: block;
   transition: .25s ease;
   border-radius: 5px; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .store-item {
       width: 45%;
       padding: 2.5%; } }
@@ -389,7 +384,7 @@ input:focus {
   font-size: 25px;
   text-align: center;
   line-height: 10px; }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .store-item h2 {
       font-size: 18px; } }
 
