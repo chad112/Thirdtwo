@@ -80,10 +80,16 @@ nav {
     @include breakpoint($break-medium) {
     display: none;
     }
+		@include breakpoint($break-mobile) {
+    display: none;
+    }
 }
 .small-nav {
     display: none;
     @include breakpoint($break-medium) {
+    display: block;
+    }
+		@include breakpoint($break-mobile) {
     display: block;
     }
 }
@@ -209,6 +215,9 @@ footer a:hover {
 	@include breakpoint($break-medium){
 		width: 100%;
 	}
+	@include breakpoint($break-mobile){
+		width: 100%;
+	}
 }
 .news-post h4 {
 	font-size: 35px;
@@ -228,6 +237,9 @@ footer a:hover {
     margin: 0 auto;
     display: block;
     @include breakpoint($break-medium) {
+    width: 90%;
+    }
+		@include breakpoint($break-mobile) {
     width: 90%;
     }
 }
@@ -290,6 +302,9 @@ footer a:hover {
     display: block;
     padding-top: 30px;
     @include breakpoint($break-medium) {
+        width: 80%;
+    }
+		@include breakpoint($break-mobile) {
         width: 80%;
     }
 }
@@ -360,9 +375,9 @@ input:focus {
 	width: 300px;
 	transition: .25s left;
 	@include breakpoint($break-large){
-        float: none;
+    float: none;
 		margin: 0 auto;
-        padding: 0;
+    padding: 0;
 	}
 }
 .team p {
@@ -412,6 +427,10 @@ input:focus {
 		width: 45%;
 		padding: 2.5%;
 	}
+	@include breakpoint($break-mobile){
+		width: 45%;
+		padding: 2.5%;
+	}
 }
 .store-item:hover {
     background-color: $purple;
@@ -425,6 +444,9 @@ input:focus {
     text-align: center;
     line-height: 10px;
 	@include breakpoint($break-medium){
+		font-size: 18px;
+	}
+	@include breakpoint($break-mobile){
 		font-size: 18px;
 	}
 }
