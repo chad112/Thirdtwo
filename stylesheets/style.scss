@@ -46,8 +46,14 @@ span {
     text-align: center;
 }
 .texture {
-  background: url("/img/texture.png");
-	background-blend-mode: multiply;
+  background-image: url("/img/texture.png");
+	background-color: #382222;
+	z-index: -10;
+	width: 100%;
+	height: 100%;
+	background-blend-mode: overlay;
+	position: fixed;
+	opacity: 1;
 	
 }
 .container {
