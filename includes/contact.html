@@ -4,39 +4,14 @@
 <hr>
 <div class="contact-form">
 	<p> We love it when our customers contact us. It gives us a chance to answer questions, and be able to serve our community better. Please let us know if we can serve you better in any way, and we will do our best to help.</p>
-<form method="post" name="myForm" onsubmit="return validateForm();"action="contactengine.php">
-					<input style="font-size: 20px;"placeholder="First / Last name"type="text" name="Name" id="Name" />
+<form name="myForm" action="contactengine.php" onsubmit="return validateForm();" ng-submit="demo()" method="post">
+					<input class="fields"style="font-size: 20px;"placeholder="First / Last name"type="text" name="Name" id="Name" />
 
-					<input style="font-size: 20px;"placeholder="Email"type="text" name="Email" id="Email" />
+					<input class="fields" style="font-size: 20px;"placeholder="Email"type="text" name="Email" id="Email" />
 					<br />
 					<textarea style="font-size: 20px;"placeholder="Message" name="Message" rows="5" cols="5" id="Message"></textarea>
-<div class="submit-button">
 					<input type="submit" name="Submit" value="Submit" class="submit-button"/>
-	</div>
 				</form>
-    <script>
-function validateForm() {
-    var x = document.forms["myForm"]["Email"].value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        swal("Error", "Not a valid email address" , "error");
-        return false;
-    }
-    var x = document.forms["myForm"]["Name"].value;
-    if (x == null || x == "") {
-        swal("Error" ,"Your name must be filled out!" , "error");
-        return false;
-    }
-    var x = document.forms["myForm"]["Message"].value;
-    if (x == null || x == "") {
-        swal("Error" ,"Don't you want to leave a message?" , "error");
-        return false;
-    }
-}
-</script>
-	<script src="lib/sweet-alert.min.js"></script>
-	<script src="notify.js"></script>
 
 </div>
 

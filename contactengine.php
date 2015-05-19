@@ -1,6 +1,6 @@
 <?php
-
-$EmailFrom = "mrdraper@chadschaub.com";
+//var_dump($_POST);
+$EmailFrom = "$Email";
 $EmailTo = "chad@chadschaub.com";
 $Subject = "Thirdtwo Inquiry";
 $Name = Trim(stripslashes($_POST['Name'])); 
@@ -24,10 +24,11 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=/index.html#success\">";
-  echo '<script>$.notify("Thank you for your order. We will contact you shortly.", "info");</script>';
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=#success\">";
+  echo '<script>demo();</script>';
 }
 else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=#/#error\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=#error\">";
+    echo '<script>demo();</script>';
 }
 ?>
