@@ -168,18 +168,33 @@ footer {
     width: 100%;
     height: 200px;
     border-top: 1px solid #e8e8e8;
+	@include breakpoint ($break-mobile) {
+		height: 300px;
+	}
 }
 .footer-copy {
     text-align: center;
     padding: 40px;
+	@include breakpoint ($break-mobile) {
+		padding: 20px 0;
+	}
 }
 .footer-copy img {
     width: 50px;
     padding: 5px;
     transition: .25s ease;
+	@include breakpoint($break-mobile){
+		width: 150px;
+	}
 }
 .footer-copy img:hover {
     opacity: .8;
+}
+.footer-copy p {
+	@include breakpoint($break-mobile) {
+	font-size: 25px;
+		padding: 10px 0;
+	}
 }
 footer a {
     text-decoration: none;
@@ -339,24 +354,31 @@ footer a:hover {
         width: 80%;
     }
 		@include breakpoint($break-mobile) {
-        width: 80%;
+        width: 100%;
     }
 }
 .fields {
     width: 100%;
-    margin: 10px;
+    margin: 10px 0px;
     height: 50px;
     border-radius: 5px;
     -webkit-appearance: none;
     border: none;
     font-family: 'voyagerregular';
+	@include breakpoint($break-mobile) {
+			height: 100px;
+		font-size: 40px;
+	}
 }
 .contact-form textarea {
     width: 100%;
-    margin: 10px;
+    margin: 10px 0px;
     border-radius: 5px;
     border: none;
     font-family: 'voyagerregular';
+	@include breakpoint ($break-mobile) {
+			font-size: 40px;
+	}
 }
 textarea:focus {
     outline: none;
@@ -371,12 +393,17 @@ input:focus {
     width: 200px;
     position: relative;
     display: block;
-    margin: 10px;
+    margin: 10px 0;
     font-family: 'voyagerregular';
 
 }
-.map {
+.map iframe{
 		padding: 80px 0px 0px 0px;
+	@include breakpoint ($break-mobile) {
+	width: 100%;
+		height: 600px;
+		padding-top: 40px;
+	}
 }
 
 ///////////////////////ABOUT////////////////////////////
@@ -408,13 +435,16 @@ input:focus {
 	float: left;
 	margin: 0;
 	padding: 20px;
-	height: 300px;
+	height: auto;
 	width: 300px;
 	transition: .25s left;
 	@include breakpoint($break-large){
     float: none;
 		margin: 0 auto;
     padding: 0;
+		@include breakpoint($break-mobile){
+			width: 100%;
+		}
 	}
 }
 .team p {
@@ -452,6 +482,12 @@ input:focus {
     text-align: center;
 	overflow: hidden;
 }
+.store-container p {
+	@include breakpoint($break-mobile) {
+		font-size: 25px;
+		line-height: 30px;
+	}
+}
 .store-item {
     margin:  0;
     width: 30%;
@@ -465,8 +501,9 @@ input:focus {
 		padding: 2.5%;
 	}
 	@include breakpoint($break-mobile){
-		width: 45%;
-		padding: 2.5%;
+		width: 100%;
+		margin: 0 auto;
+		display: block;
 	}
 }
 .store-item:hover {
@@ -484,16 +521,23 @@ input:focus {
 		font-size: 18px;
 	}
 	@include breakpoint($break-mobile){
-		font-size: 18px;
+		font-size: 40px;
 	}
 }
 .store-item p {
     text-align: center;
     font-style: italic;
+	@include breakpoint($break-mobile) {
+		font-size: 25px;
+	}
 }
 .store-item h4 {
     font-size: 15px;
-    text-align: left;
+    text-align: center;
+	@include breakpoint($break-mobile) {
+		font-size: 30px;
+		padding: 15px 0px;
+	}
 }
 
 /* ANIMATIONS
