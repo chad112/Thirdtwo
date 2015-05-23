@@ -1,4 +1,4 @@
-    var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'cgNotify']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
     // configure our routes
     myApp.config(function($routeProvider) {
@@ -42,21 +42,9 @@
                 controller  : 'mainCtrl'
             });
         
-    });
-
+    });   
 
     // create the controller and inject Angular's $scope
     myApp.controller('mainCtrl', function($scope) {
     });
 
-function mainCtrl($scope,notify){  // <-- Inject notify
-
-  notify('Your notification message'); // <-- Call notify with your message
-
-  notify({ message:'My message', templateUrl:'my_template.html'} );
-    
-    $scope.demo = function() {
-        notify('does this work?');
-    }
-
-}

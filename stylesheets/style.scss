@@ -4,7 +4,7 @@
 $break-small: max-wdith 480px;
 $break-medium: max-width 768px;
 $break-large: max-width 1000px;
-$break-mobile: (-webkit-min-device-pixel-ratio: 2) (max-device-width: 667px);
+$break-mobile: (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px);
 
 $purple: #5b3838;
 
@@ -97,6 +97,9 @@ nav {
     }
 		@include breakpoint($break-mobile) {
     display: block;
+            font-size: 80px;
+            margin-top: 0;
+            padding-top: 0;
     }
 }
 nav img {
@@ -124,6 +127,10 @@ nav ul li a {
     font-family: voyagerbold;
     text-decoration: none;
 		transition: .25s ease;
+    @include breakpoint ($break-mobile) {
+        font-size: 50px;
+        padding: 0 20px;
+    }
 }
 nav ul li a:hover {
     color: $purple;
@@ -149,7 +156,7 @@ nav ul li a:hover {
     font-size: 12px;
     }
     @include breakpoint($break-mobile){
-    font-size: 12px;
+    font-size: 25px;
     }
 }
 
