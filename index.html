@@ -100,6 +100,16 @@
 							}
 					}
 					</script>
+    <script>
+if(window.location.hash == '#/success')
+{
+$.notify("Thank you for your email! We'll be in contact shortly.", "success");
+}
+if(window.location == '#/error')
+{
+$.notify("I'm sorry, your email was not sent. Please try again.", "error");
+}
+</script>
 						<script src="lib/sweet-alert.min.js"></script>
 
 

@@ -24,10 +24,9 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=/#success\">";
-  echo '<script>$.notify("Thank you for your inquiry. We will contact you shortly.", "info");</script>';
+  header("location:http://www.chadschaub.com/testserver/#/success");
 }
-else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=#error\">";
+else {
+  header("location:http://www.chadschaub.com/testserver/#/error");
 }
 ?>
