@@ -518,17 +518,17 @@ input:focus {
 		display: block;
 	}
 }
-.store-item:hover {
-    background-color: $purple;
-    color: #fff;
-}
+//.store-item:hover {
+  //  background-color: $purple;
+    //color: #fff;
+//}
 .store-item img {
     width: 100%;
 }
 .store-item h2 {
     font-size: 25px;
     text-align: center;
-    line-height: 10px;
+    line-height: 25px;
 	@include breakpoint($break-medium){
 		font-size: 18px;
 	}
