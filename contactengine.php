@@ -1,8 +1,8 @@
 <?php
 //var_dump($_POST);
 $EmailFrom = "$Email";
-$EmailTo = "chad@chadschaub.com";
-$Subject = "Thirdtwo Inquiry";
+$EmailTo = "jimmy@third-wave.coffee";
+$Subject = "Third Wave Coffee Inquiry";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 
 $Message = Trim(stripslashes($_POST['Message'])); 
@@ -24,9 +24,9 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-  header("location:http://www.chadschaub.com/testserver/#/success");
+  header("location:http://www.third-wave.coffee/#/success");
 }
 else {
-  header("location:http://www.chadschaub.com/testserver/#/error");
+  header("location:http://www.third-wave.coffee/#/error");
 }
 ?>
