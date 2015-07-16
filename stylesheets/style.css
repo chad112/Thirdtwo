@@ -371,7 +371,7 @@ input:focus {
   font-family: 'voyagerregular'; }
   @media (max-device-width: 667px) {
     .submit-button {
-      height: 80px;
+      height: 200px;
       width: 300px;
       font-size: 30px;
       font-family: 'helvetica'; } }
@@ -503,6 +503,10 @@ input:focus {
     .store-item h4 {
       font-size: 30px;
       padding: 15px 0px; } }
+
+@media (max-device-width: 667px) {
+  .store-item input {
+    width: 50%; } }
 
 /* ANIMATIONS
 ============================================================================= */

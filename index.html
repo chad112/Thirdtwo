@@ -30,7 +30,7 @@
     <!-- Angular App -->
     <script src="js/app.js"></script>
     <!-- Contact-page Map -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
       function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
@@ -43,11 +43,11 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    
+
 </head>
 <body ng-controller="mainCtrl">
     <nav>
-        
+
         <img src="img/logo.gif">
         <ul class="large-nav">
             <li><a href="#/">Home</a></li>
@@ -68,16 +68,16 @@
         <h3> Third Wave Coffee opens Fall 2015 </h3>
     </div>
 	<div ng-view class="container toggle"></div>
-			
+
     <footer>
         <div class="footer-copy">
-        <p> Copyright Third Wave Coffee shop. Designed by <a href="http://www.prismads.net">Prism Advertising</a></p>
+        <p> Copyright Third Wave Coffee shop. Designed by <a href="http://www.chadschaub.com">Chad Schaub Art + Design</a></p>
 					<p> <a href="tel:+15406137575">540.613.7575</a> | <a href="https://www.google.com/maps/place/17011+forest+rd+Forest+VA+24551">17011 Forest Rd Forest, VA 24551</a></p>
             <a href="http://www.facebook.com/thirdwavecoffee"><img  src="img/facebook.png"/> </a>
             <a href="https://instagram.com/third_wave_coffee/"><img src="img/instagram.png"/></a>
         </div>
-        
-        
+
+
 </footer>
     	<script>
 					function validateForm() {
@@ -109,14 +109,10 @@ if(window.location == '#/error')
 {
 $.notify("I'm sorry, your email was not sent. Please try again.", "error");
 }
-if(window.location == '#/submit')
-{
-$.notify("Your order was successful! Jimmy will contact you shortly.", "success");
-}
 </script>
 						<script src="lib/sweet-alert.min.js"></script>
 
 
 </body>
-	
+
 </html>

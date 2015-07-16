@@ -402,7 +402,7 @@ input:focus {
     margin: 10px 0;
     font-family: 'voyagerregular';
     @include breakpoint ($break-mobile) {
-        height: 80px;
+        height: 200px;
         width: 300px;
         font-size: 30px;
         font-family: 'helvetica';
@@ -549,6 +549,11 @@ input:focus {
 	@include breakpoint($break-mobile) {
 		font-size: 30px;
 		padding: 15px 0px;
+	}
+}
+.store-item input {
+	@include breakpoint($break-mobile) {
+	width: 50%;
 	}
 }
 

@@ -35,6 +35,10 @@
                 templateUrl : 'includes/home.html',
                 controller  : 'mainCtrl'
             })
+						.when('/order', {
+                templateUrl : 'includes/ordersuccess.html',
+                controller  : 'mainCtrl'
+            })
 
             // route for the contact page
             .when('/contact', {
